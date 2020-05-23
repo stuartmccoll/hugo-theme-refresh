@@ -1,0 +1,21 @@
+{{ define "main" }}
+<main class="posts">
+    {{- if .Content }}
+    <div class="content">{{ .Content }}</div>
+    {{- end }}
+
+    {{- range .Site.RegularPages.GroupByDate "2006" }}
+    <div class="posts-group">
+        <h2 class="posts-year">{{ .Key }}</h2>
+        {{- range .Pages }}
+        {{ if ne .Page.Title "About" }}
+        <div class="posts-item">
+            <span class="posts-date">{{ .Date.Format "January 2"}}</span>
+            <a class="posts-title" href="{{.Permalink}}">{{.Title}}</a>
+        </div>
+        {{ end }}
+        {{- end }}
+    </div>
+    {{- end }}
+</main>
+{{ end }}
