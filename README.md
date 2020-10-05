@@ -8,7 +8,7 @@ You'll need to have installed Hugo and created a new site before you can install
 
 To install Hugo, [follow the official installation guide](https://gohugo.io/getting-started/quick-start/).
 
-Refresh has only been tested on Hugo **v0.70.0**. The theme may fail to compile on lower versions.
+Refresh has only been tested on Hugo **v0.75.1**. The theme may fail to compile on lower versions.
 
 ### Create a new Hugo site
 
