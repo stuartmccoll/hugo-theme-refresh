@@ -1,7 +1,49 @@
-$body-background: #fafafa;
-$heading-color: #333;
-$body-color: #555;
-$link-color: #0a84ff;
-$link-color-hover: #409cff;
-$link-color-focus: #0b0c0c;
-$link-focus: #fd0;
+$light: "light";
+$dark: "dark";
+
+$body-background: "body-background";
+$heading-color: "heading-color";
+$heading-subtle-color: "heading-subtle-color";
+$body-color: "body-color";
+$link-color: "link-color";
+$link-color-hover: "link-color-hover";
+$link-color-focus: "link-color-focus";
+$link-focus: "link-focus";
+
+$themes: (
+    $light: (
+        $body-background: #fafafa,
+        $heading-color: #171717,
+        $heading-subtle-color: #505050,
+        $body-color: #171717,
+        $link-color: #0065b3,
+        $link-color-hover: #0065b3,
+        $link-color-focus: #0b0c0c,
+        $link-focus: #fd0,
+    ),
+    $dark: (
+        $body-background: #2f2f2f,
+        $heading-color: #d2d2d2,
+        $heading-subtle-color: #d2d2d2,
+        $body-color: #d2d2d2,
+        $link-color: #75b6e7,
+        $link-color-hover: #278cda,
+        $link-color-focus: #0b0c0c,
+        $link-focus: #fd0,
+    )
+);
+
+@mixin getProperty($theme, $property, $color) {
+    #{$property}: map-get($theme, $color);
+}
+
+@mixin theme($property, $color) {
+    $light: map-get($themes, $light);
+    $dark: map-get($themes, $dark);
+
+    @include getProperty($light, $property, $color);
+
+    @media (prefers-color-scheme: dark) {
+        @include getProperty($dark, $property, $color);
+    }
+}
