@@ -58,7 +58,7 @@ The default values in the following should be replaced:
 licenseType = "CC BY 4.0"
 licenseLink = "https://creativecommons.org/licenses/by/4.0"
 issuesLink = "https://github.com/stuartmccoll/hugo-theme-refresh/issues/new"
-twitterUsername = "itstuartmccoll"
+mastodonUsername = "@stuartmccoll@hachyderm.io"
 ```
 
 ## License
