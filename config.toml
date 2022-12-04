@@ -16,11 +16,11 @@ title = "Site Title"
     # Link to create a new GitHub issue
     issuesLink = "https://github.com/stuartmccoll/hugo-theme-refresh/issues/new"
 
-    # Flag to toggle inclusion of Twitter link
-    includeTwitter = true
+    # Flag to toggle inclusion of Mastodon link
+    includeMastodon = true
 
-    # Twitter username
-    twitterUsername = "itstuartmccoll"
+    # Mastodon username
+    mastodonUsername = "@stuartmccoll@hachyderm.io"
 
     # Flag to toggle inclusion of Hugo version details
     includeHugoVersion = true

@@ -1,28 +1,14 @@
 <footer>
-    {{ if ne .Page.Title "About" }}
-    {{ if ne .Page.Title "Posts" }}
-    {{ if not .Page.IsHome }}
-    <section>
-        <h3>Share this content</h3>
-        <p>
-            <a
-                href="https://twitter.com/intent/tweet?url=https://stuartmccoll.github.io{{ .Page.RelPermalink }}&via=itstuartmccoll&text=I%27m%20reading">
-                Tweet this blog post
-            </a>
-        </p>
-    </section>
-    <hr />
-    {{ end }}
-    {{ end }}
-    {{ end}}
     <section>
         <h3>More</h3>
         <ul>
             {{ if .Site.Params.includeIssues }}
             <li>
                 <a
-                    href="https://twitter.com/intent/tweet?text=%40{{ .Site.Params.twitterUsername }}%20Hello%2C%20%3Cinsert%20message%20here%3E">
-                    Contact me on Twitter
+                    href="https://hachyderm.io/@stuartmccoll"
+                    rel="me"
+                >
+                    Contact me on Mastodon
                 </a>
             </li>
             {{ end }}
