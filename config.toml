@@ -24,3 +24,9 @@ title = "Site Title"
 
     # Flag to toggle inclusion of Hugo version details
     includeHugoVersion = true
+
+    # Flag to toggle inclusion of Azure Application Insights
+    includeApplicationInsights = false
+
+    # Azure Application Insights connection string
+    applicationInsightsConnectionString = "placeholder"
